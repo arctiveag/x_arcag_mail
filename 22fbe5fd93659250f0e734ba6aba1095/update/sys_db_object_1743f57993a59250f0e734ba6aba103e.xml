@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>true</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>Mail Configuration</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_arcag_mail_configuration</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 09:09:36</sys_created_on>
+        <sys_id>1743f57993a59250f0e734ba6aba103e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mail Configuration</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_db_object_1743f57993a59250f0e734ba6aba103e</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 09:09:36</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role display_value="x_arcag_mail.table_user_mail_configuration" name="x_arcag_mail.table_user_mail_configuration">f914b5b993a59250f0e734ba6aba107a</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>

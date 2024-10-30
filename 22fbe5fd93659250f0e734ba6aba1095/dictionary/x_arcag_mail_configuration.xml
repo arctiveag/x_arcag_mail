@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1743f57993a59250f0e734ba6aba103e" label="Mail Configuration" max_length="40" name="x_arcag_mail_configuration" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>

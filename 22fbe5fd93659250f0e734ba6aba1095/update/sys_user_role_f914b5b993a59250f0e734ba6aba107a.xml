@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_arcag_mail.table_user_mail_configuration</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>table_user_mail_configuration</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 09:09:35</sys_created_on>
+        <sys_id>f914b5b993a59250f0e734ba6aba107a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_arcag_mail.table_user_mail_configuration</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_user_role_f914b5b993a59250f0e734ba6aba107a</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 09:09:35</sys_updated_on>
+    </sys_user_role>
+</record_update>
