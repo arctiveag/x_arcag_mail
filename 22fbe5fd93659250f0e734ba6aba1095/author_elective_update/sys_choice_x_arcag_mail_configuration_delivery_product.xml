@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="delivery_product" table="x_arcag_mail_configuration" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>delivery_product</element>
+            <name>x_arcag_mail_configuration</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:23:48</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>delivery_product</sys_name>
+            <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+            <sys_update_name>sys_choice_x_arcag_mail_configuration_delivery_product</sys_update_name>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:23:48</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>B-Post</label>
+            <language>de</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:24:13</sys_updated_on>
+            <value>cheap</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cheap</label>
+            <language>en</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:23:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:23:59</sys_updated_on>
+            <value>cheap</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>A-Post</label>
+            <language>de</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:24:27</sys_updated_on>
+            <value>fast</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fast</label>
+            <language>en</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:24:22</sys_updated_on>
+            <value>fast</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bulk</label>
+            <language>en</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:24:42</sys_updated_on>
+            <value>bulk</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Massenversand</label>
+            <language>de</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:24:50</sys_updated_on>
+            <value>bulk</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Premium</label>
+            <language>en</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:24:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:25:07</sys_updated_on>
+            <value>premium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Premium</label>
+            <language>de</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:25:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:25:18</sys_updated_on>
+            <value>premium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Registered</label>
+            <language>en</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:25:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:25:34</sys_updated_on>
+            <value>registered</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>delivery_product</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Einschreiben</label>
+            <language>de</language>
+            <name>x_arcag_mail_configuration</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:25:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:25:42</sys_updated_on>
+            <value>registered</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

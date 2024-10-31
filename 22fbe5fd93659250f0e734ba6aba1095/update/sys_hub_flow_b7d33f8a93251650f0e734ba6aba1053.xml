@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=967000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="">{}</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Send a letter using Pingen</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>postal_mail__send_letter</internal_name>
+        <label_cache>[{"name":"cc580dd1-d077-483f-bfe4-9fa16f93b901.letter","label":"1 - Postal Mail - Upload PDF to Pingen➛Letter","reference":"x_arcag_mail_letter","reference_display":"Letter","type":"reference","base_type":"reference","usedInstances":{"0bc0c400-d801-4285-88b1-dbf130a5e643":["letter"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"19525109-d1a8-46e8-85e6-f12e245ba45d"}},{"name":"subflow.pdf","label":"Input➛PDF","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","column_name":"","usedInstances":{"cc580dd1-d077-483f-bfe4-9fa16f93b901":["pdf"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"4bb7649d-0c89-47b5-8774-1b0f15a2553f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.mail_configuration","label":"Input➛Mail Configuration","reference":"x_arcag_mail_configuration","reference_display":"Mail Configuration","type":"reference","base_type":"reference","column_name":"","usedInstances":{"cc580dd1-d077-483f-bfe4-9fa16f93b901":["mail_configuration"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"04332146-d448-4faa-899d-84474528f9f7","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>4c97f30293651650f0e734ba6aba1021</master_snapshot>
+        <name>Postal Mail - Send letter</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:06:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b7d33f8a93251650f0e734ba6aba1053</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Postal Mail - Send letter</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_hub_flow_b7d33f8a93251650f0e734ba6aba1053</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b7d33f8a93251650f0e734ba6aba1053^sys_idNOT IN3fd33f8a93251650f0e734ba6aba1055"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b7d33f8a93251650f0e734ba6aba1053</id>
+        <name>Postal Mail - Send letter</name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:06:21</sys_created_on>
+        <sys_id>3fd33f8a93251650f0e734ba6aba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:06:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3fd33f8a93251650f0e734ba6aba1055"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b7d33f8a93251650f0e734ba6aba1053^sys_idNOT INfa04338a93251650f0e734ba6aba10fd,fe04b3ca93251650f0e734ba6aba1004"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=4bb7649d-0c89-47b5-8774-1b0f15a2553f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_attachment</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>pdf</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>PDF</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</model>
+        <model_id>b7d33f8a93251650f0e734ba6aba1053</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_attachment">sys_attachment</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:07:06</sys_created_on>
+        <sys_id>fa04338a93251650f0e734ba6aba10fd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:07:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fa04338a93251650f0e734ba6aba10fd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=04332146-d448-4faa-899d-84474528f9f7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_arcag_mail_configuration</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>mail_configuration</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Mail Configuration</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</model>
+        <model_id>b7d33f8a93251650f0e734ba6aba1053</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_arcag_mail_configuration">x_arcag_mail_configuration</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:07:06</sys_created_on>
+        <sys_id>fe04b3ca93251650f0e734ba6aba1004</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:07:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fe04b3ca93251650f0e734ba6aba1004"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=b7d33f8a93251650f0e734ba6aba1053^sys_idNOT IN4187730293651650f0e734ba6aba10c9,6cd5bb4e93251650f0e734ba6aba10da"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Postal Mail - Send Letter">a4573fce93251650f0e734ba6aba1013</action_type>
+        <action_type_parent display_value="Postal Mail - Send Letter">76f5fb4e93251650f0e734ba6aba1006</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:16</sys_created_on>
+        <sys_id>4187730293651650f0e734ba6aba10c9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <ui_id>0bc0c400-d801-4285-88b1-dbf130a5e643</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4187730293651650f0e734ba6aba10c9"/>
+    <sys_element_mapping action="delete_multiple" query="id=4187730293651650f0e734ba6aba10c9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>letter</field>
+        <id>4187730293651650f0e734ba6aba10c9</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:16</sys_created_on>
+        <sys_id>4987730293651650f0e734ba6aba10ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a4573fce93251650f0e734ba6aba1013</table>
+        <value>{{cc580dd1-d077-483f-bfe4-9fa16f93b901.letter}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4187730293651650f0e734ba6aba10c9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4187730293651650f0e734ba6aba10c9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Postal Mail - Upload PDF to Pingen">cb457f0e93251650f0e734ba6aba10bb</action_type>
+        <action_type_parent display_value="Postal Mail - Upload PDF to Pingen">43a4ff8a93251650f0e734ba6aba10bc</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:14:52</sys_created_on>
+        <sys_id>6cd5bb4e93251650f0e734ba6aba10da</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <ui_id>cc580dd1-d077-483f-bfe4-9fa16f93b901</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6cd5bb4e93251650f0e734ba6aba10da"/>
+    <sys_element_mapping action="delete_multiple" query="id=6cd5bb4e93251650f0e734ba6aba10da"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mail_configuration</field>
+        <id>6cd5bb4e93251650f0e734ba6aba10da</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:14:52</sys_created_on>
+        <sys_id>acd5bb4e93251650f0e734ba6aba10dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:14:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cb457f0e93251650f0e734ba6aba10bb</table>
+        <value>{{subflow.mail_configuration}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pdf</field>
+        <id>6cd5bb4e93251650f0e734ba6aba10da</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:14:52</sys_created_on>
+        <sys_id>60d5bb4e93251650f0e734ba6aba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:14:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cb457f0e93251650f0e734ba6aba10bb</table>
+        <value>{{subflow.pdf}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6cd5bb4e93251650f0e734ba6aba10da"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6cd5bb4e93251650f0e734ba6aba10da"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053^sys_idNOT IN3604b3ca93251650f0e734ba6aba1008,fe04b3ca93251650f0e734ba6aba1003"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>mail_configuration</element>
+        <help/>
+        <hint/>
+        <label>Mail Configuration</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:07:06</sys_created_on>
+        <sys_id>3604b3ca93251650f0e734ba6aba1008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:07:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>pdf</element>
+        <help/>
+        <hint/>
+        <label>PDF</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:07:06</sys_created_on>
+        <sys_id>fe04b3ca93251650f0e734ba6aba1003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:07:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="">{}</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Send a letter using Pingen</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>postal_mail__send_letter</internal_name>
+        <label_cache>[{"name":"cc580dd1-d077-483f-bfe4-9fa16f93b901.letter","label":"1 - Postal Mail - Upload PDF to Pingen➛Letter","reference":"x_arcag_mail_letter","reference_display":"Letter","type":"reference","base_type":"reference","usedInstances":{"0bc0c400-d801-4285-88b1-dbf130a5e643":["letter"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"19525109-d1a8-46e8-85e6-f12e245ba45d"}},{"name":"subflow.pdf","label":"Input➛PDF","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","column_name":"","usedInstances":{"cc580dd1-d077-483f-bfe4-9fa16f93b901":["pdf"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"4bb7649d-0c89-47b5-8774-1b0f15a2553f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.mail_configuration","label":"Input➛Mail Configuration","reference":"x_arcag_mail_configuration","reference_display":"Mail Configuration","type":"reference","base_type":"reference","column_name":"","usedInstances":{"cc580dd1-d077-483f-bfe4-9fa16f93b901":["mail_configuration"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"04332146-d448-4faa-899d-84474528f9f7","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>Postal Mail - Send letter</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4c97f30293651650f0e734ba6aba1021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4c97f30293651650f0e734ba6aba1021^sys_idNOT IN4097f30293651650f0e734ba6aba1023"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4c97f30293651650f0e734ba6aba1021</id>
+        <name>Postal Mail - Send letter</name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_id>4097f30293651650f0e734ba6aba1023</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4097f30293651650f0e734ba6aba1023"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4c97f30293651650f0e734ba6aba1021^sys_idNOT INc497f30293651650f0e734ba6aba1024,c497f30293651650f0e734ba6aba105e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=4bb7649d-0c89-47b5-8774-1b0f15a2553f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_attachment</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>pdf</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>PDF</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Postal Mail - Send letter">4c97f30293651650f0e734ba6aba1021</model>
+        <model_id>4c97f30293651650f0e734ba6aba1021</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_attachment">sys_attachment</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_id>c497f30293651650f0e734ba6aba1024</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c497f30293651650f0e734ba6aba1024"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=04332146-d448-4faa-899d-84474528f9f7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_arcag_mail_configuration</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>mail_configuration</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Mail Configuration</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Postal Mail - Send letter">4c97f30293651650f0e734ba6aba1021</model>
+        <model_id>4c97f30293651650f0e734ba6aba1021</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_arcag_mail_configuration">x_arcag_mail_configuration</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_id>c497f30293651650f0e734ba6aba105e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c497f30293651650f0e734ba6aba105e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=4c97f30293651650f0e734ba6aba1021^sys_idNOT IN1497f30293651650f0e734ba6aba1076,5497f30293651650f0e734ba6aba108c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Postal Mail - Upload PDF to Pingen">cb457f0e93251650f0e734ba6aba10bb</action_type>
+        <action_type_parent display_value="Postal Mail - Upload PDF to Pingen">43a4ff8a93251650f0e734ba6aba10bc</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Postal Mail - Send letter">4c97f30293651650f0e734ba6aba1021</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_id>1497f30293651650f0e734ba6aba1076</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <ui_id>cc580dd1-d077-483f-bfe4-9fa16f93b901</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1497f30293651650f0e734ba6aba1076"/>
+    <sys_element_mapping action="delete_multiple" query="id=1497f30293651650f0e734ba6aba1076"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mail_configuration</field>
+        <id>1497f30293651650f0e734ba6aba1076</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_id>d497f30293651650f0e734ba6aba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cb457f0e93251650f0e734ba6aba10bb</table>
+        <value>{{subflow.mail_configuration}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pdf</field>
+        <id>1497f30293651650f0e734ba6aba1076</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_id>9897f30293651650f0e734ba6aba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cb457f0e93251650f0e734ba6aba10bb</table>
+        <value>{{subflow.pdf}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1497f30293651650f0e734ba6aba1076"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1497f30293651650f0e734ba6aba1076"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Postal Mail - Send Letter">a4573fce93251650f0e734ba6aba1013</action_type>
+        <action_type_parent display_value="Postal Mail - Send Letter">76f5fb4e93251650f0e734ba6aba1006</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Postal Mail - Send letter">4c97f30293651650f0e734ba6aba1021</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_id>5497f30293651650f0e734ba6aba108c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <ui_id>0bc0c400-d801-4285-88b1-dbf130a5e643</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5497f30293651650f0e734ba6aba108c"/>
+    <sys_element_mapping action="delete_multiple" query="id=5497f30293651650f0e734ba6aba108c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>letter</field>
+        <id>5497f30293651650f0e734ba6aba108c</id>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_id>9097f30293651650f0e734ba6aba108d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a4573fce93251650f0e734ba6aba1013</table>
+        <value>{{cc580dd1-d077-483f-bfe4-9fa16f93b901.letter}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5497f30293651650f0e734ba6aba108c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5497f30293651650f0e734ba6aba108c"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4c97f30293651650f0e734ba6aba1021"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021^sys_idNOT IN4c97f30293651650f0e734ba6aba105a,5097f30293651650f0e734ba6aba1066"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>pdf</element>
+        <help/>
+        <hint/>
+        <label>PDF</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_id>4c97f30293651650f0e734ba6aba105a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>mail_configuration</element>
+        <help/>
+        <hint/>
+        <label>Mail Configuration</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:29</sys_created_on>
+        <sys_id>5097f30293651650f0e734ba6aba1066</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c97f30293651650f0e734ba6aba1021"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c97f30293651650f0e734ba6aba1021"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c97f30293651650f0e734ba6aba1021"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>b7d33f8a93251650f0e734ba6aba1053</sys_id>
+        <latest_snapshot>4c97f30293651650f0e734ba6aba1021</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b7d33f8a93251650f0e734ba6aba1053"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b7d33f8a93251650f0e734ba6aba1053^sys_idNOT IN5497f30293651650f0e734ba6aba10a9"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@7a7d271d</plan>
+        <plan_id display_value="Postal Mail - Send letter">b7d33f8a93251650f0e734ba6aba1053</plan_id>
+        <snapshot>4c97f30293651650f0e734ba6aba1021</snapshot>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 13:22:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5497f30293651650f0e734ba6aba10a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:22:30</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

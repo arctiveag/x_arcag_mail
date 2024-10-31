@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>The organisation ID within Pingen&#13;
+&#13;
+example: 7de2778b-7d04-4632-b8aa-aeb73b01faa5</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_arcag_mail.pingen.organisation</name>
+        <read_roles/>
+        <suffix>pingen.organisation</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:41:41</sys_created_on>
+        <sys_id>dbef7679932d9250f0e734ba6aba10d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_arcag_mail.pingen.organisation</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_properties_dbef7679932d9250f0e734ba6aba10d5</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 14:41:41</sys_updated_on>
+        <type>string</type>
+        <value>7de2778b-7d04-4632-b8aa-aeb73b01faa5</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=dbef7679932d9250f0e734ba6aba10d5"/>
+</record_update>

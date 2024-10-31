@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:10:09</sys_created_on>
+        <sys_id>a4e87239932d9250f0e734ba6aba10f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ScriptableRESTMessageClient.execute</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_scope_privilege_a4e87239932d9250f0e734ba6aba10f6</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 14:10:09</sys_updated_on>
+        <target_name>ScriptableRESTMessageClient.execute</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+</record_update>

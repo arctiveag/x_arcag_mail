@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="1743f57993a59250f0e734ba6aba103e" label="Mail Configuration" max_length="40" name="x_arcag_mail_configuration" type="collection">
+        <element choice="3" default="simplex" label="Print mode" max_length="40" name="print_mode" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Duplex" sequence="20" value="duplex"/>
+                <element inactive_on_update="false" label="Simplex" sequence="10" value="simplex"/>
+                <element inactive_on_update="false" label="Beidseitig" language="de" sequence="20" value="duplex"/>
+                <element inactive_on_update="false" label="Einseitig" language="de" sequence="10" value="simplex"/>
+            </choice>
+        </element>
+        <element choice="3" default="cheap" label="Delivery Product" max_length="40" name="delivery_product" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="B-Post" language="de" sequence="10" value="cheap"/>
+                <element inactive_on_update="false" label="Bulk" sequence="30" value="bulk"/>
+                <element inactive_on_update="false" label="Premium" sequence="40" value="premium"/>
+                <element inactive_on_update="false" label="Massenversand" language="de" sequence="30" value="bulk"/>
+                <element inactive_on_update="false" label="Premium" language="de" sequence="40" value="premium"/>
+                <element inactive_on_update="false" label="Registered" sequence="50" value="registered"/>
+                <element inactive_on_update="false" label="A-Post" language="de" sequence="20" value="fast"/>
+                <element inactive_on_update="false" label="Fast" sequence="20" value="fast"/>
+                <element inactive_on_update="false" label="Einschreiben" language="de" sequence="50" value="registered"/>
+                <element inactive_on_update="false" label="Cheap" sequence="10" value="cheap"/>
+            </choice>
+        </element>
         <element label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="3" default="grayscale" label="Print spectrum" max_length="40" name="print_spectrum" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Schwarz-weiss" language="de" sequence="10" value="grayscale"/>
+                <element inactive_on_update="false" label="Grayscale" sequence="10" value="grayscale"/>
+                <element inactive_on_update="false" label="Color" sequence="20" value="color"/>
+                <element inactive_on_update="false" label="Farbe" language="de" sequence="20" value="color"/>
+            </choice>
+        </element>
+        <element choice="3" default="left" label="Address position" max_length="40" name="address_position" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Links" language="de" sequence="10" value="left"/>
+                <element inactive_on_update="false" label="Rechts" language="de" sequence="20" value="right"/>
+                <element inactive_on_update="false" label="Left" sequence="10" value="left"/>
+                <element inactive_on_update="false" label="Right" sequence="20" value="right"/>
+            </choice>
+        </element>
     </element>
 </database>

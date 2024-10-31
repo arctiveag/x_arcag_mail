@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_arcag_mail.PingenAPI</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Abstract helper class for Pingen API access</description>
+        <name>PingenAPI</name>
+        <script><![CDATA[class PingenAPI {
+	constructor(pingenHost = "api-staging.pingen.com") {
+		this.configuration = {
+			pingen_host: pingenHost
+		};
+	}
+
+	/**
+	 * Handle an exception that arose during the exection of a RESTMessageV2
+	 * (2024-10-30 / BPF)
+	 *
+	 * Callers: [All Scripts / BR etc. which call this function]
+	 *
+	 * @private
+	 * @param {String} endpoint - The name of the message (e.g. "file-upload", not the endpoint URL)
+	 * @param {Error} exception - The catched exception
+	 * @param {Object} result - The current result object
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {Error} error - The exception
+	 *                    {String} message - An system internal message about the state of the execution
+	 * 					  everything will be assigned to the result parameter
+	 */
+	_handleException(endpoint, exception, result) {
+		if (x_arcag_sic.AutomatedIncident.enabled()) {
+			const message = [`The endpoint "${endpoint}" failed with the message: "${exception.message}"\n Please investigate the reason for this (invalid token, pingen outtage (see https://status.pingen.com/)).`];
+			message.push(`Error Message: ${exception.message}`);
+			message.push(`Error Trace: ${exception.stack}`);
+			message.push(`Configuration: ${JSON.stringify(this.configuration, null, 2)}`);
+			x_arcag_sic.AutomatedIncident.create(`[PingenAPI] ${endpoint} failed`, message.join("\n"));
+		}
+		const errorResult = {
+			message: gs.getMessage("postal_mail_pingen_error"),
+			error: ex,
+		};
+
+		return Object.assign(result, errorResult);
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:48:15</sys_created_on>
+        <sys_id>7a918bb1936d9250f0e734ba6aba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PingenAPI</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_script_include_7a918bb1936d9250f0e734ba6aba1054</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 14:48:15</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</application>
+        <file_path/>
+        <instance_id>a7f3d74cdb1548903050ac44d496197e</instance_id>
+        <instance_name>ven03323</instance_name>
+        <name>sys_script_include_7a918bb1936d9250f0e734ba6aba1054</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_arcag_mail.PingenAPI&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Abstract helper class for Pingen API access&lt;/description&gt;&lt;name&gt;PingenAPI&lt;/name&gt;&lt;script&gt;&lt;![CDATA[class PingenAPI {
+	constructor(pingenHost = "api-staging.pingen.com") {
+		this.configuration = {
+			pingen_host: pingenHost
+		};
+	}
+
+	/**
+	 * Handle an exception that arose during the exection of a RESTMessageV2
+	 * (2024-10-30 / BPF)
+	 *
+	 * Callers: [All Scripts / BR etc. which call this function]
+	 *
+	 * @private
+	 * @param {String} endpoint - The name of the message (e.g. "file-upload", not the endpoint URL)
+	 * @param {Error} exception - The catched exception
+	 * @param {Object} result - The current result object
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {Error} error - The exception
+	 *                    {String} message - An system internal message about the state of the execution
+	 * 					  everything will be assigned to the result parameter
+	 */
+	_handleException(endpoint, exception, result) {
+		if (x_arcag_sic.AutomatedIncident.enabled()) {
+			const message = [`The endpoint "${endpoint}" failed with the message: "${exception.message}"\n Please investigate the reason for this (invalid token, pingen outtage (see https://status.pingen.com/)).`];
+			message.push(`Error Message: ${exception.message}`);
+			message.push(`Error Trace: ${exception.stack}`);
+			message.push(`Configuration: ${JSON.stringify(this.configuration, null, 2)}`);
+			x_arcag_sic.AutomatedIncident.create(`[PingenAPI] ${endpoint} failed`, message.join("\n"));
+		}
+		const errorResult = {
+			message: gs.getMessage("postal_mail_pingen_error"),
+			error: ex,
+		};
+
+		return Object.assign(result, errorResult);
+	}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bjoern.pfoster&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-10-30 14:48:15&lt;/sys_created_on&gt;&lt;sys_id&gt;7a918bb1936d9250f0e734ba6aba1054&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;PingenAPI&lt;/sys_name&gt;&lt;sys_package display_value="Postal PDF" source="x_arcag_mail"&gt;22fbe5fd93659250f0e734ba6aba1095&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Postal PDF"&gt;22fbe5fd93659250f0e734ba6aba1095&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_7a918bb1936d9250f0e734ba6aba1054&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bjoern.pfoster&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-10-30 14:48:15&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>809915144</payload_hash>
+        <record_name>PingenAPI</record_name>
+        <reverted_from/>
+        <source>eafbe5fd93659250f0e734ba6aba1099</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:48:15</sys_created_on>
+        <sys_id>3e918bb1936d9250f0e734ba6aba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192dde612f90000001</sys_recorded_at>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 14:48:15</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>fe918bb1636d92509653d5d240f29555</update_guid>
+        <update_guid_history>fe918bb1636d92509653d5d240f29555:809915144</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:48:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>035fd7ef1f444801803c5e24104e16a9</sys_id>
+        <sys_metadata>7a918bb1936d9250f0e734ba6aba1054</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PingenAPI</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_scope_delete display_value="">4fa55ab3a58345808b03a72cebf8a400</sys_scope_delete>
+        <sys_update_name>sys_script_include_7a918bb1936d9250f0e734ba6aba1054</sys_update_name>
+        <sys_update_version display_value="sys_script_include_7a918bb1936d9250f0e734ba6aba1054">3e918bb1936d9250f0e734ba6aba1056</sys_update_version>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 14:48:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

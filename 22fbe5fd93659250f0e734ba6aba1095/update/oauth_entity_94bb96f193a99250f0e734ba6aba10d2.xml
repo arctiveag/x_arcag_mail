@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity">
+    <oauth_entity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <access_token_lifespan>1800</access_token_lifespan>
+        <active>true</active>
+        <auth_code_lifespan>0</auth_code_lifespan>
+        <auth_url>https://identity-staging.pingen.com/auth/register</auth_url>
+        <certificate_url/>
+        <client_id>DNBTFZX7S3M8XSDWAGRZ</client_id>
+        <client_secret>﷞﷟﷒792c710c1bb11110d036a685ec4bcb79﷬﷔1﷬﷭vND5LL8aYdybCXsotUzR3Q==qOZ1jEp_F0gxam7lRtTi9Pr-CmXtJDCO9SXI4_xqHhtOMqPdF7YKD2xJ32vC-0eFSAQxM5pnZovF9V8c7yK2P5n5qObd01SGtQv8a_MkolIEE5qTBy1X0LmluDW8WDZt﷮﷯</client_secret>
+        <client_uuid>14bb96f193a99250f0e734ba6aba10d2</client_uuid>
+        <code_challenge_method>S256</code_challenge_method>
+        <comments/>
+        <default_grant_type>client_credentials</default_grant_type>
+        <id_token_lifespan>0</id_token_lifespan>
+        <jwt_provider/>
+        <login_url/>
+        <logo_url>https://api.pingen.com/static/main/pingen-logo.svg</logo_url>
+        <message_signature_lifespan>0</message_signature_lifespan>
+        <mobile_client>false</mobile_client>
+        <name>Pingen Staging</name>
+        <oauth_api_script/>
+        <protocol_name/>
+        <public_client>false</public_client>
+        <redirect_url>https://ven03323.service-now.com/oauth_redirect.do</redirect_url>
+        <refresh_token_lifespan>8640000</refresh_token_lifespan>
+        <refresh_token_url/>
+        <restricted_binding>false</restricted_binding>
+        <revoke_token_url/>
+        <salt>0</salt>
+        <send_client_credentials_as>request_body_parameter</send_client_credentials_as>
+        <skip_authorize>false</skip_authorize>
+        <sys_class_name>oauth_entity</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 12:04:26</sys_created_on>
+        <sys_id>94bb96f193a99250f0e734ba6aba10d2</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Pingen Staging</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>oauth_entity_94bb96f193a99250f0e734ba6aba10d2</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 12:43:31</sys_updated_on>
+        <token_url>https://identity-staging.pingen.com/auth/access-tokens</token_url>
+        <type>oauth_provider</type>
+        <use_mutual_auth>false</use_mutual_auth>
+        <user/>
+    </oauth_entity>
+</record_update>

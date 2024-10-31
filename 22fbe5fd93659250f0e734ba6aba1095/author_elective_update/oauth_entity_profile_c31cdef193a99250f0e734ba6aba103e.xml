@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile">
+    <oauth_entity_profile action="DELETE">
+        <default>true</default>
+        <grant_type>client_credentials</grant_type>
+        <jwt_provider/>
+        <name>Pingen Staging default_profile</name>
+        <oauth_entity display_value="Pingen Staging">94bb96f193a99250f0e734ba6aba10d2</oauth_entity>
+        <saml2_assertion_producer/>
+        <sys_class_name>oauth_entity_profile</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 12:04:26</sys_created_on>
+        <sys_id>c31cdef193a99250f0e734ba6aba103e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pingen Staging default_profile</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>oauth_entity_profile_c31cdef193a99250f0e734ba6aba103e</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 12:04:26</sys_updated_on>
+    </oauth_entity_profile>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</application>
+        <file_path/>
+        <instance_id>a7f3d74cdb1548903050ac44d496197e</instance_id>
+        <instance_name>ven03323</instance_name>
+        <name>oauth_entity_profile_c31cdef193a99250f0e734ba6aba103e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile"><oauth_entity_profile action="INSERT_OR_UPDATE"><default>true</default><grant_type>client_credentials</grant_type><jwt_provider/><name>Pingen Staging default_profile</name><oauth_entity display_value="Pingen Staging">94bb96f193a99250f0e734ba6aba10d2</oauth_entity><saml2_assertion_producer/><sys_class_name>oauth_entity_profile</sys_class_name><sys_created_by>bjoern.pfoster</sys_created_by><sys_created_on>2024-10-30 12:04:26</sys_created_on><sys_id>c31cdef193a99250f0e734ba6aba103e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Pingen Staging default_profile</sys_name><sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package><sys_policy/><sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope><sys_update_name>oauth_entity_profile_c31cdef193a99250f0e734ba6aba103e</sys_update_name><sys_updated_by>bjoern.pfoster</sys_updated_by><sys_updated_on>2024-10-30 12:04:26</sys_updated_on></oauth_entity_profile></record_update>]]></payload>
+        <payload_hash>-1849797841</payload_hash>
+        <record_name>Pingen Staging default_profile</record_name>
+        <reverted_from/>
+        <source>eafbe5fd93659250f0e734ba6aba1099</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 12:04:26</sys_created_on>
+        <sys_id>cf1cdef193a99250f0e734ba6aba1040</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192dd50167d0000001</sys_recorded_at>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 12:04:26</sys_updated_on>
+        <type>OAuth Entity Profile</type>
+        <update_guid>831cdef160a9925072c8d52dde4cea40</update_guid>
+        <update_guid_history>831cdef160a9925072c8d52dde4cea40:-1849797841</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2024-10-30 13:32:31">a682623d93a99250f0e734ba6aba10dc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 12:32:31</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity_profile">oauth_entity_profile</sys_db_object>
+        <sys_id>1f29ef94462041589e3e779078e69640</sys_id>
+        <sys_metadata>c31cdef193a99250f0e734ba6aba103e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pingen Staging default_profile</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_scope_delete display_value="">4fa55ab3a58345808b03a72cebf8a400</sys_scope_delete>
+        <sys_update_name>oauth_entity_profile_c31cdef193a99250f0e734ba6aba103e</sys_update_name>
+        <sys_update_version display_value="oauth_entity_profile_c31cdef193a99250f0e734ba6aba103e">cf1cdef193a99250f0e734ba6aba1040</sys_update_version>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 12:32:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

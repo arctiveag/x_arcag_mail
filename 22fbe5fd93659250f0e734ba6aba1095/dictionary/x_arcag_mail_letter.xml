@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ca15f13d93a59250f0e734ba6aba10e3" label="Brief" max_length="40" name="x_arcag_mail_letter" type="collection">
+        <element label="Mail Configuration" max_length="32" name="mail_configuration" reference="x_arcag_mail_configuration" type="reference"/>
+        <element label="Price Value" max_length="20" name="price_value" type="decimal"/>
+        <element label="Price Currency" max_length="6" name="price_currency" type="string"/>
+        <element label="Pingen ID" max_length="60" name="id" type="string"/>
+        <element label="Attachment" max_length="32" name="attachment" reference="sys_attachment" reference_qual="content_type=application/pdf^EQ" reference_qual_condition="content_type=application/pdf^EQ" type="reference"/>
+        <element choice="3" default="uploading" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Versendet" language="de" sequence="40" value="sent"/>
+                <element inactive_on_update="false" label="Validierung" language="de" sequence="20" value="validating"/>
+                <element inactive_on_update="false" label="Versandvorbereitung" language="de" sequence="30" value="sending"/>
+                <element inactive_on_update="false" label="Uploading" sequence="10" value="uploading"/>
+                <element inactive_on_update="false" label="Validating" sequence="20" value="validating"/>
+                <element inactive_on_update="false" label="Fehler" language="de" sequence="90" value="issue"/>
+                <element inactive_on_update="false" label="Sent" sequence="40" value="sent"/>
+                <element inactive_on_update="false" label="Undeliverable" sequence="80" value="undeliverable"/>
+                <element inactive_on_update="false" label="Wird hochgeladen" language="de" sequence="10" value="uploading"/>
+                <element inactive_on_update="false" label="Sending" sequence="30" value="sending"/>
+                <element inactive_on_update="false" label="Unzustellbar" language="de" sequence="80" value="undeliverable"/>
+                <element inactive_on_update="false" label="Issue" sequence="90" value="issue"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="attachment"/>
+        </index>
+        <index name="index2">
+            <element name="mail_configuration"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_arcag_mail.PingenLetterAPI</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Access pingen endpoints for letter handling easily</description>
+        <name>PingenLetterAPI</name>
+        <script><![CDATA[/* global sn_ws, PingenAPI */
+/* eslint no-undef: "error" */
+class PingenLetterAPI extends PingenAPI {
+	/**
+	 * Create a letter in pingen (POST /organisations/{organisation}/letters)
+	 * (2024-10-30 / BPF)
+	 *
+	 * Callers:
+	 *  - PostalMailSender::createLetter
+	 * 
+	 * @param {String} fileName - The display name of the file
+	 * @param {String} uploadURL - The S3 Upload URL (retrieved using PingenFileAPI::getDetailsForFileUpload)
+	 * @param {String} uploadURLSignature - The S3 Upload URL Signature (retrieved using PingenFileAPI::getDetailsForFileUpload)
+	 * @param {String} [addressPosition] - The position of the address, either "left" or "right"
+	 * @param {String} [deliveryProduct] - The delivery product, enum of ["fast", "cheap", "bulk", "premium", "registered"]
+	 * @param {String} [printMode] - The printing mode, either "simplex" (single side) or "duplex" (both sides)
+	 * @param {String} [printSpectrum] - The printing colour spectrum, either "color" or "grayscale"
+	 * @param {String} [senderAddress] - The sender address, max 64 chars
+	 * @param {Bool} [autoSend] - Automatically send the letter after creation
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {boolean} success - state of the execution (whether it was successful or not)
+	 *                    {String} message - An system internal message about the state of the execution
+	 *                    {String} letter_id - The Pingen letter ID
+	 *                    {String} state - The Pingen state
+	 *                    {Number|null} price_value - The price value determined by Pingen
+	 *                    {String|null} price_currency - The price currency
+	 *                    {String|null} address - The recipient address parsed by Pingen
+	 *                    {String|null} tracking_number - The postal tracking number
+	 * 					  {Object} response - Response meta information
+	 * 					  {number} response.code - The HTTP Response Code
+	 * 					  {String} response.body - The HTTP Response Body (unparsed)
+	 *                    {null|Error} error - The catched exception in an error case
+	 */
+	createLetter(
+		fileName,
+		uploadURL,
+		uploadURLSignature,
+		addressPosition = "left",
+		deliveryProduct = "cheap",
+		printMode = "simplex",
+		printSpectrum = "grayscale",
+		senderAddress = null,
+		autoSend = false
+	) {
+		const result = {
+			success: false,
+			message: "",
+			letter_id: null,
+			state: "uploading",
+			price_value: null,
+			price_currency: null,
+			address: null,
+			tracking_number: null,
+
+			// meta information
+			error: null,
+			response: {
+				code: null,
+				body: null,
+			},
+		};
+
+		const attributes = {
+			file_original_name: fileName,
+			file_url: uploadURL,
+			file_url_signature: uploadURLSignature,
+			address_position: addressPosition,
+			auto_send: autoSend,
+			delivery_product: deliveryProduct,
+			print_mode: printMode,
+			print_spectrum: printSpectrum,
+		};
+		if (senderAddress) {
+			attributes["sender_address"] = senderAddress.slice(0, 64);
+		}
+
+		const body = {
+			data: {
+				type: "letters",
+				attributes: attributes,
+			}
+		};
+
+		try {
+			const letterCreateMessage = new sn_ws.RESTMessageV2("x_arcag_mail.Pingen", "letter-create");
+			letterCreateMessage.setStringParameterNoEscape("pingen_host", this.configuration.pingen_host);
+			letterCreateMessage.setStringParameterNoEscape("pingen_organisation", this.configuration.organisation);
+			letterCreateMessage.setStringParameterNoEscape("body", JSON.stringify(body));
+			const response = letterCreateMessage.execute();
+			result.response.body = response.getBody();
+			result.response.code = response.getStatusCode();
+			const responseBody = JSON.parse(result.response.body);
+			result.letter_id = responseBody?.data?.id;
+			result.state = responseBody?.data?.attributes?.status;
+			result.price_value = responseBody?.data?.attributes?.price_value;
+			result.price_currency = responseBody?.data?.attributes?.price_currency;
+			result.address = responseBody?.data?.attributes?.address;
+			result.tracking_number = responseBody?.data?.attributes?.tracking_number;
+			result.success = true;
+		} catch (ex) {
+			return this._handleException("letter-create", ex, result);
+		}
+
+		return result;
+	}
+
+	/**
+	 * This is the Description of the function
+	 * (2024-01-01 / ABC)
+	 *
+	 * Callers: 
+	 *  - PostalMailSender::sendLetter
+	 *
+	 * @param {String} letterID - The letter ID
+	 * @param {String} [deliveryProduct] - The delivery product, enum of ["fast", "cheap", "bulk", "premium", "registered"]
+	 * @param {String} [printMode] - The printing mode, either "simplex" (single side) or "duplex" (both sides)
+	 * @param {String} [printSpectrum] - The printing colour spectrum, either "color" or "grayscale"
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {boolean} success - state of the execution (whether it was successful or not)
+	 *                    {String} message - An system internal message about the state of the execution
+	 *                    {String} state - The Pingen state
+	 *                    {Number|null} price_value - The price value determined by Pingen
+	 *                    {String|null} price_currency - The price currency
+	 *                    {String|null} address - The recipient address parsed by Pingen
+	 *                    {String|null} tracking_number - The postal tracking number
+	 * 					  {Object} response - Response meta information
+	 * 					  {number} response.code - The HTTP Response Code
+	 * 					  {String} response.body - The HTTP Response Body (unparsed)
+	 *                    {null|Error} error - The catched exception in an error case
+	 */
+	sendLetter(
+		letterID,
+		deliveryProduct = "cheap",
+		printMode = "simplex",
+		printSpectrum = "grayscale"
+	) {
+		const result = {
+			success: false,
+			message: "",
+			state: "validating",
+			price_value: null,
+			price_currency: null,
+			address: null,
+			tracking_number: null,
+
+			// meta information
+			error: null,
+			response: {
+				code: null,
+				body: null,
+			},
+		};
+
+		try {
+			const letterSendMessage = new sn_ws.RESTMessageV2("x_arcag_mail.Pingen", "letter-send");
+			letterSendMessage.setStringParameterNoEscape("pingen_organisation", this.configuration.organisation);
+			letterSendMessage.setStringParameterNoEscape("pingen_host", this.configuration.pingen_host);
+			letterSendMessage.setStringParameterNoEscape("letter_id", letterID);
+			letterSendMessage.setStringParameterNoEscape("delivery_product", deliveryProduct);
+			letterSendMessage.setStringParameterNoEscape("print_mode", printMode);
+			letterSendMessage.setStringParameterNoEscape("print_spectrum", printSpectrum);
+			const response = letterSendMessage.execute();
+			result.response.body = response.getBody();
+			result.response.code = response.getStatusCode();
+			const responseBody = JSON.parse(result.response.body);
+			result.letter_id = responseBody?.data?.id;
+			result.state = responseBody?.data?.attributes?.status || "sending";
+			result.price_value = responseBody?.data?.attributes?.price_value || null;
+			result.price_currency = responseBody?.data?.attributes?.price_currency || null;
+			result.address = responseBody?.data?.attributes?.address;
+			result.tracking_number = responseBody?.data?.attributes?.tracking_number;
+			result.success = true;
+		} catch (ex) {
+			return this._handleException("letter-send", ex, result);
+		}
+
+		return result;
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 14:50:59</sys_created_on>
+        <sys_id>1bd183b1936d9250f0e734ba6aba109c</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>PingenLetterAPI</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_script_include_1bd183b1936d9250f0e734ba6aba109c</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:20:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

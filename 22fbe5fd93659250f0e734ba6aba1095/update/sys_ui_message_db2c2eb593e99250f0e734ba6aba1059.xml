@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <code/>
+        <commented_message/>
+        <key>postal_mail_pingen_error</key>
+        <language>en</language>
+        <message>Error: Pingen-API failed!</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 13:14:38</sys_created_on>
+        <sys_id>db2c2eb593e99250f0e734ba6aba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>postal_mail_pingen_error</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_ui_message_db2c2eb593e99250f0e734ba6aba1059</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 13:14:38</sys_updated_on>
+    </sys_ui_message>
+</record_update>

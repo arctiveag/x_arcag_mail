@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_arcag_mail.PostalMailSender</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Send postal mail letters using a script include&#13;
+&#13;
+createLetter: creates a letter based on a sys_attachment record with content-type: application/pdf as letter with a mail configuration for sending&#13;
+sendLetter: sends a letter that was created by ::createLetter</description>
+        <name>PostalMailSender</name>
+        <script><![CDATA[/* global gs, GlideRecord, PingenFileAPI, PingenLetterAPI */
+/* eslint no-undef: "error" */
+class PostalMailSender {
+	constructor() {
+		const pingenHost = gs.getProperty("x_arcag_mail.pingen.host");
+		const pingenOrganisation = gs.getProperty("x_arcag_mail.pingen.organisation");
+		this.pingenFileUpload = new PingenFileAPI(pingenHost, pingenOrganisation);
+		this.pingenLetter = new PingenLetterAPI(pingenHost, pingenOrganisation);
+	}
+
+	/**
+	 * Upload a PDF to Pingen
+	 * (2024-10-30 / BPF)
+	 *
+	 * Callers:
+	 *
+	 * @param {GlideRecord<sys_attachment>} attachmentGr - The attachment (content_type=application/pdf) that will be sent as a letter
+	 * @param {GlideRecord<x_arcag_mail_configuration>} mailConfigurationGr - The (active) mail configuration to use for sending the letter
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {boolean} success - state of the execution (whether it was successful or not)
+	 *                    {String} message - An system internal message about the state of the execution
+	 *                    {String} letter_id - The ID of the letter in Pingen
+	 *                    {GlideRecord<x_arcag_mail_letter>} letter - The letter record
+	 */
+	createLetter(attachmentGr, mailConfigurationGr) {
+		const result = {
+			success: false,
+			message: "",
+			letter_id: null,
+			letter: new GlideRecord(),
+		};
+
+		if (!attachmentGr || !attachmentGr.getUniqueValue() || attachmentGr.getValue("content_type") != "application/pdf") {
+			result.message = gs.getMessage("postal_mail_send_error_attachment_not_pdf");
+
+			return result;
+		}
+
+		if (!mailConfigurationGr || !mailConfigurationGr.getUniqueValue() || !mailConfigurationGr.active) {
+			result.message = gs.getMessage("postal_mail_send_error_configuration_invalid");
+
+			return result;
+		}
+
+		// Get Upload URL for the PDF
+		const detailsForUploadResult = this.pingenFileUpload.getDetailsForFileUpload();
+		if (!detailsForUploadResult.success) {
+			result.success = false;
+			result.message = detailsForUploadResult.message;
+
+			return result;
+		}
+
+		const uploadURL = detailsForUploadResult.file_url;
+		const uploadURLSignature = detailsForUploadResult.file_url_signature;
+
+		// Upload the PDF to the file storage of Pingen
+		const fileUploadResult = this.pingenFileUpload.sendFileToS3URL(uploadURL, attachmentGr.getUniqueValue());
+
+		if (!fileUploadResult.success) {
+			result.success = false;
+			result.message = fileUploadResult.message;
+
+			return result;
+		}
+
+		// Link the Uploaded PDF to a Letter Record in Pingen
+		const letterResult = this.pingenLetter.createLetter(
+			attachmentGr.getValue("file_name"),
+			uploadURL,
+			uploadURLSignature,
+			mailConfigurationGr.getValue("address_position"),
+			mailConfigurationGr.getValue("delivery_product"),
+			mailConfigurationGr.getValue("print_mode"),
+			mailConfigurationGr.getValue("print_spectrum")
+		);
+
+		if (!letterResult.success) {
+			result.success = false;
+			result.message = letterResult.message;
+
+			return result;
+		}
+
+		result.success = true;
+		result.letter_id = letterResult.letter_id;
+
+		const letterGr = new GlideRecord("x_arcag_mail_letter");
+		letterGr.initialize();
+		letterGr.id = letterResult.letter_id;
+		letterGr.state = letterResult.state;
+		letterGr.mail_configuration = mailConfigurationGr.getUniqueValue();
+		letterGr.attachment = attachmentGr.getUniqueValue();
+		gs.info("BPF DEBUG: typeof=" + (typeof letterResult.price_currency) + " value=" + letterResult.price_currency)
+		letterGr.price_currency = letterResult.price_currency;
+		letterGr.price_value = letterResult.price_value;
+		letterGr.insert();
+		result.letter = letterGr;
+
+
+		return result;
+	}
+
+	/**
+	 * This is the Description of the function
+	 * (2024-01-01 / ABC)
+	 *
+	 * Callers: [All Scripts / BR etc. which call this function]
+	 *
+	 * @param {GlideRecord<x_arcag_mail_letter>} letterGr - The letter record (needs to be created using ::createLetter)
+	 *
+	 * @return {Object} - An object containing the execution information of the method,
+	 *                    {boolean} success - state of the execution (whether it was successful or not)
+	 *                    {String} message - An system internal message about the state of the execution
+	 */
+	sendLetter(letterGr) {
+		const result = {
+			success: false,
+			message: "",
+		};
+
+		if (!letterGr || !letterGr.getUniqueValue() /* TODO add state validation here */) {
+			result.message = gs.getMessage("postal_mail_send_error_letter_send_impossible");
+
+			return result;
+		}
+
+		const configGr = letterGr.mail_configuration.getRefRecord();
+
+		const sendResult = this.pingenLetter.sendLetter(letterGr.getValue("id"), configGr.getValue("delivery_product"), configGr.getValue("print_mode"), configGr.getValue("print_spectrum"));
+		if (!sendResult.success) {
+			result.success = false;
+			result.message = sendResult.message;
+
+			return result;
+		}
+
+		letterGr.setValue("state", sendResult.state);
+		letterGr.setValue("price_value", sendResult.price_value);
+		letterGr.setValue("price_currency", sendResult.price_currency);
+		letterGr.setValue("address", sendResult.address);
+		letterGr.setValue("tracking_number", sendResult.tracking_number);
+		letterGr.update();
+		result.success = true;
+
+		return result;
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 12:56:55</sys_created_on>
+        <sys_id>9f77a6b193e99250f0e734ba6aba1026</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>PostalMailSender</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_script_include_9f77a6b193e99250f0e734ba6aba1026</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 13:20:59</sys_updated_on>
+    </sys_script_include>
+</record_update>

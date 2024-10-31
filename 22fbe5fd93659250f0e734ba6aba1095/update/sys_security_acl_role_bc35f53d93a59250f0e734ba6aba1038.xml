@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 09:14:26</sys_created_on>
+        <sys_id>bc35f53d93a59250f0e734ba6aba1038</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_arcag_mail_letter.x_arcag_mail.table_user_letter</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_security_acl display_value="x_arcag_mail_letter">f835f53d93a59250f0e734ba6aba1017</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_bc35f53d93a59250f0e734ba6aba1038</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 09:14:26</sys_updated_on>
+        <sys_user_role display_value="x_arcag_mail.table_user_letter" name="x_arcag_mail.table_user_letter">a435f13d93a59250f0e734ba6aba10e8</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

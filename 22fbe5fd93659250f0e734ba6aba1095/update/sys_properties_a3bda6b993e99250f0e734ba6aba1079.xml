@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>api-staging.pingen.com=Pingen Staging API&#13;
+api.pingen.com=Pingen Production API</choices>
+        <description>Contains the URL endpoint for Pingen&#13;
+&#13;
+default: api-staging.pingen.com</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_arcag_mail.pingen.host</name>
+        <read_roles/>
+        <suffix>pingen.host</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 13:22:26</sys_created_on>
+        <sys_id>a3bda6b993e99250f0e734ba6aba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_arcag_mail.pingen.host</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_properties_a3bda6b993e99250f0e734ba6aba1079</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 13:22:26</sys_updated_on>
+        <type>string</type>
+        <value>api-staging.pingen.com</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=a3bda6b993e99250f0e734ba6aba1079"/>
+</record_update>

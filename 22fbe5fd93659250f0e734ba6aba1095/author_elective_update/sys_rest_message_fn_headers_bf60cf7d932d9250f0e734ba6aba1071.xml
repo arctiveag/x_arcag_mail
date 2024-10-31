@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="DELETE">
+        <name>Content-Type</name>
+        <rest_message_function display_value="letter-create">3420cf7d932d9250f0e734ba6aba106d</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 16:26:30</sys_created_on>
+        <sys_id>bf60cf7d932d9250f0e734ba6aba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_bf60cf7d932d9250f0e734ba6aba1071</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 16:26:30</sys_updated_on>
+        <value>application/vnd.api+json</value>
+    </sys_rest_message_fn_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</application>
+        <file_path/>
+        <instance_id>a7f3d74cdb1548903050ac44d496197e</instance_id>
+        <instance_name>ven03323</instance_name>
+        <name>sys_rest_message_fn_headers_bf60cf7d932d9250f0e734ba6aba1071</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers"><sys_rest_message_fn_headers action="INSERT_OR_UPDATE"><name>Content-Type</name><rest_message_function display_value="letter-create">3420cf7d932d9250f0e734ba6aba106d</rest_message_function><sys_class_name>sys_rest_message_fn_headers</sys_class_name><sys_created_by>bjoern.pfoster</sys_created_by><sys_created_on>2024-10-30 16:26:30</sys_created_on><sys_id>bf60cf7d932d9250f0e734ba6aba1071</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Content-Type</sys_name><sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package><sys_policy/><sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope><sys_update_name>sys_rest_message_fn_headers_bf60cf7d932d9250f0e734ba6aba1071</sys_update_name><sys_updated_by>bjoern.pfoster</sys_updated_by><sys_updated_on>2024-10-30 16:26:30</sys_updated_on><value>application/vnd.api+json</value></sys_rest_message_fn_headers></record_update>]]></payload>
+        <payload_hash>-1184952409</payload_hash>
+        <record_name>Content-Type</record_name>
+        <reverted_from/>
+        <source>eafbe5fd93659250f0e734ba6aba1099</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 16:26:30</sys_created_on>
+        <sys_id>8a189fbd93ad9250f0e734ba6aba10cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192de4005cc0000001</sys_recorded_at>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 16:26:30</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>4e189fbd1cad925029506e96313c3aca</update_guid>
+        <update_guid_history>4e189fbd1cad925029506e96313c3aca:-1184952409</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 16:26:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn_headers">sys_rest_message_fn_headers</sys_db_object>
+        <sys_id>5413ba0a382449eb930f7cf065979021</sys_id>
+        <sys_metadata>bf60cf7d932d9250f0e734ba6aba1071</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_parent display_value="letter-create">3420cf7d932d9250f0e734ba6aba106d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_scope_delete display_value="">4fa55ab3a58345808b03a72cebf8a400</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_headers_bf60cf7d932d9250f0e734ba6aba1071</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_headers_bf60cf7d932d9250f0e734ba6aba1071">8a189fbd93ad9250f0e734ba6aba10cb</sys_update_version>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 16:26:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

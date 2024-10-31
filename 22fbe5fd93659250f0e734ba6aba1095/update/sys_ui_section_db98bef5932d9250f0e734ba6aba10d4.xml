@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="db98bef5932d9250f0e734ba6aba10d4" sys_domain="global" table="x_arcag_mail_configuration" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_id>13987239932d9250f0e734ba6aba1019</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>1</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_id>df987239932d9250f0e734ba6aba1019</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_id>d7987239932d9250f0e734ba6aba101a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>3</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_id>df987239932d9250f0e734ba6aba101a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_id>d7987239932d9250f0e734ba6aba101b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>delivery_product</element>
+            <position>5</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:23:03</sys_created_on>
+            <sys_id>7503720a93edd250f0e734ba6aba1059</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:23:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>print_mode</element>
+            <position>6</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:26:12</sys_created_on>
+            <sys_id>84c3724a93edd250f0e734ba6aba10f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:26:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>print_spectrum</element>
+            <position>7</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:27:51</sys_created_on>
+            <sys_id>4c24f64a93edd250f0e734ba6aba105f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:27:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>address_position</element>
+            <position>8</position>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-31 08:30:38</sys_created_on>
+            <sys_id>81c4728a93edd250f0e734ba6aba10b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_arcag_mail_configuration" sys_domain="global" view="Default view">db98bef5932d9250f0e734ba6aba10d4</sys_ui_section>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-31 08:30:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_arcag_mail_configuration</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>bjoern.pfoster</sys_created_by>
+            <sys_created_on>2024-10-30 14:08:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>db98bef5932d9250f0e734ba6aba10d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_arcag_mail_configuration</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+            <sys_update_name>sys_ui_section_db98bef5932d9250f0e734ba6aba10d4</sys_update_name>
+            <sys_updated_by>bjoern.pfoster</sys_updated_by>
+            <sys_updated_on>2024-10-30 14:08:58</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

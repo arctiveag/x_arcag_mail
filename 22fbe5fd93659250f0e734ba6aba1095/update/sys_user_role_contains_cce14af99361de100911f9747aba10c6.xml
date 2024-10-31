@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_arcag_mail.letter_reader" name="x_arcag_mail.letter_reader">4771ce7d93e59250f0e734ba6aba10c6</contains>
+        <role display_value="x_arcag_mail.manager" name="x_arcag_mail.manager">3194b5f993a59250f0e734ba6aba1002</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-30 10:09:49</sys_created_on>
+        <sys_id>cce14af99361de100911f9747aba10c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_arcag_mail.letter_reader.x_arcag_mail.manager</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_user_role_contains_cce14af99361de100911f9747aba10c6</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-30 10:09:49</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+  "data": {&#13;
+    "id": "${letter_id}",&#13;
+    "type": "letters",&#13;
+    "attributes": {&#13;
+      "delivery_product": "${delivery_product}",&#13;
+      "print_mode": "${print_mode}",&#13;
+      "print_spectrum": "${print_spectrum}"&#13;
+    }&#13;
+  }&#13;
+}</content>
+        <function_name>letter-send</function_name>
+        <http_method>patch</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Pingen [ letter-send ]</qualified_name>
+        <rest_endpoint>https://${pingen_host}/organisations/${pingen_organisation}/letters/${letter_id}/send</rest_endpoint>
+        <rest_message display_value="Pingen">082b463d93299250f0e734ba6aba10b9</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>bjoern.pfoster</sys_created_by>
+        <sys_created_on>2024-10-31 08:52:53</sys_created_on>
+        <sys_id>6349764293211650f0e734ba6aba10b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>letter-send</sys_name>
+        <sys_package display_value="Postal PDF" source="x_arcag_mail">22fbe5fd93659250f0e734ba6aba1095</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Postal PDF">22fbe5fd93659250f0e734ba6aba1095</sys_scope>
+        <sys_update_name>sys_rest_message_fn_6349764293211650f0e734ba6aba10b4</sys_update_name>
+        <sys_updated_by>bjoern.pfoster</sys_updated_by>
+        <sys_updated_on>2024-10-31 08:52:53</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
