@@ -26,7 +26,7 @@
 &#13;
 This application is not intended to be published to the ServiceNow Store. See KB0010199 for transport instructions</short_description>
         <source>x_arcag_mail</source>
-        <store_correlation_id>REPOAPP0001883049</store_correlation_id>
+        <store_correlation_id>REPOAPP0001883053</store_correlation_id>
         <store_url/>
         <subscription_entitlement/>
         <sys_class_name>sys_app</sys_class_name>
@@ -34,15 +34,15 @@ This application is not intended to be published to the ServiceNow Store. See KB
         <sys_created_by>bjoern.pfoster</sys_created_by>
         <sys_created_on>2024-10-30 08:34:08</sys_created_on>
         <sys_id>22fbe5fd93659250f0e734ba6aba1095</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>bjoern.pfoster</sys_updated_by>
-        <sys_updated_on>2024-10-31 13:24:19</sys_updated_on>
+        <sys_updated_on>2024-10-31 13:28:21</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </sys_app>
 </record_update>
