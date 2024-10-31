@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_arcag_mail_configuration">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="" extends="sys_metadata" table="x_arcag_mail_configuration">
         <active>true</active>
         <array>false</array>
         <attributes/>
